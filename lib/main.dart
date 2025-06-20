@@ -111,14 +111,12 @@ class _ESP32ControlScreenState extends State<ESP32ControlScreen> {
   }
 
   Future<void> _initBluetooth() async {
-    // Listen to Bluetooth state changes
     FlutterBluePlus.adapterState.listen((state) {
       setState(() {
         bluetoothState = state;
       });
     });
 
-    // Get current state
     bluetoothState = await FlutterBluePlus.adapterState.first;
   }
 
@@ -429,7 +427,7 @@ class _ESP32ControlScreenState extends State<ESP32ControlScreen> {
               ],
             ),
           ),
-          buildDisconnectButton(), // New button under grid
+          buildDisconnectButton(), 
         ],
       );
     }
