@@ -14,7 +14,7 @@ import 'pages/esp_control.dart';
 
 void callbackDispatcher() {
   Workmanager().executeTask((task, inputData) async {
-    final channel = WebSocketChannel.connect(Uri.parse('wss://esp32-websocket-server-495y.onrender.com'));
+    final channel = WebSocketChannel.connect(Uri.parse('URL'));
     channel.sink.add("APP");
     await Future.delayed(Duration(seconds: 2));
     channel.sink.add("ENVIRONMENT_DATA");
