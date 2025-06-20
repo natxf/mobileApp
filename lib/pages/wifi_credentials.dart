@@ -29,8 +29,7 @@ class _WiFiCredentialsScreenState extends State<WiFiCredentialsScreen> {
         const SnackBar(content: Text('Wysłano do ESP32!')),
       );
 
-      // Start 30-second timer to go back
-      returnTimer?.cancel(); // Cancel any existing timer
+      returnTimer?.cancel(); 
       returnTimer = Timer(const Duration(seconds: 5), () {
         if (mounted) {
           Navigator.pop(context);
